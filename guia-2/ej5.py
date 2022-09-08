@@ -11,26 +11,28 @@ os.system("cls")
 
 #Declaro variables
 frase = str()
-letrasIngresadas = int()
-vocalesIngresadas = int()
-pjeVocales = float()
-palabrasIngresadas = int()
-longitudPalabras = int()
-promedioPalabras = float()
-palabraMasLarga = int()
-palabrasConTa = int()
+frase_sin_punto = str()
+letras_ingresadas = int()
+vocales_ingresadas = int()
+pje_vocales = float()
+palabras_ingresadas = int()
+longitud_palabras = int()
+promedio = float()
+palabra_mas_larga = int()
+palabras_con_ta = int()
 vocales = tuple()
 
 #Inicializo variables
 frase = ""
-letrasIngresadas = 0     #Punto A
-vocalesIngresadas = 0    #Punto A
-pjeVocales = 0.0         #Punto A
-palabrasIngresadas = 0   #Punto B
-longitudPalabras = 0     #Punto B
-promedioPalabras = 0.0   #Punto B
-palabraMasLarga = 0      #Punto C
-palabrasConTa = 0        #Punto D
+frase_sin_punto = ""
+letras_ingresadas = 0     #Punto A
+vocales_ingresadas = 0    #Punto A
+pje_vocales = 0.0         #Punto A
+palabras_ingresadas = 0   #Punto B
+longitud_palabras = 0     #Punto B
+promedio = 0.0   #Punto B
+palabra_mas_larga = 0      #Punto C
+palabras_con_ta = 0        #Punto D
 vocales = ("a", "e", "i", "o", "u")
         
 #Proceso
@@ -43,39 +45,45 @@ while not(frase.endswith(".")):
     if (frase == "."): break
 
     if (frase.endswith(".")): 
-        fraseSinPunto = frase[0: len(frase)-1]
+        frase_sin_punto = frase[0: len(frase)-1]
     else: 
-        fraseSinPunto = frase
+        frase_sin_punto = frase
 
-    for palabra in fraseSinPunto.split():
+    for palabra in frase_sin_punto.split():
 
         #Punto A
         for letra in palabra:
-            letrasIngresadas += 1
-            if (letra in vocales): vocalesIngresadas += 1
+
+            letras_ingresadas += 1
+            if (letra in vocales): 
+                vocales_ingresadas += 1
         
         #Punto B
-        palabrasIngresadas += 1
-        longitudPalabras += len(palabra)
+        palabras_ingresadas += 1
+        longitud_palabras += len(palabra)
 
         #Punto C
-        if (palabrasIngresadas == 1 or len(palabra) > palabraMasLarga):
-            palabraMasLarga = len(palabra)
+        if (palabras_ingresadas == 1) or (len(palabra) > palabra_mas_larga):
+            palabra_mas_larga = len(palabra)
         
-        #Punco D
+        #Punto D
         if palabra.startswith("ta"):
-            palabrasConTa += 1
+            palabras_con_ta += 1
     
-pjeVocales = vocalesIngresadas * 100 / (letrasIngresadas)  #Punto A, Resto 1 por el caracter (".")
-promedioPalabras = longitudPalabras // palabrasIngresadas #Punto B
+pje_vocales = vocales_ingresadas * 100 / (letras_ingresadas)  #Punto A
+promedio = longitud_palabras // palabras_ingresadas #Punto B
 
 print("\nResultados")
-print(f"Total de letras: {letrasIngresadas}")
-print(f"Total de vocales: {vocalesIngresadas}")
-print(f"Palabras ingresadas: {palabrasIngresadas}")
-print(f"Total longitud de palabras: {longitudPalabras}")
+print(f"Total de letras: {letras_ingresadas}")
+print(f"Total de vocales: {vocales_ingresadas}")
+print(f"Palabras ingresadas: {palabras_ingresadas}")
+print(f"Total longitud de palabras: {longitud_palabras}")
 
-print(f"\nPorcentaje de vocales respecto del total de letras de la frase: {pjeVocales}%")
-print(f"Longitud promedio de las palabras: {promedioPalabras}")
-print(f"Longitud de la palabra mas larga del texto: {palabraMasLarga}")
-print(f"Cantidad de palabras que comienzan con 'ta': {palabrasConTa}")     
+print(f"\nPorcentaje de vocales respecto del total de letras de la frase: {pje_vocales}%")
+print(f"Longitud promedio de las palabras: {promedio}")
+print(f"Longitud de la palabra mas larga del texto: {palabra_mas_larga}")
+print(f"Cantidad de palabras que comienzan con 'ta': {palabras_con_ta}")     
+
+
+#Prueba de escritorio
+

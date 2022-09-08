@@ -8,20 +8,20 @@ os.system("cls")
 # c) Informar el sueldo promedio del semestre.
 
 #Declaro variables
-sueldoActual = int()
-totalSueldos = int()
-menorSueldo = int()
-mayorSueldo = int()
-mesMenorSueldo = int()
+sueldo_actual = int()
+total_sueldos = int() 
+menor_sueldo = int()  
+mayor_sueldo = int()
+mes_menor_sueldo = int()
 aguinaldo = float()
 promedio = float()
 
 #Inicializo variables
-sueldoActual = 0
-totalSueldos = 0 
-menorSueldo = 0  
-mayorSueldo = 0
-mesMenorSueldo = 0
+sueldo_actual = 0
+total_sueldos = 0 
+menor_sueldo = 0  
+mayor_sueldo = 0
+mes_menor_sueldo = 0
 aguinaldo = 0.0
 promedio = 0.0
 
@@ -29,22 +29,52 @@ promedio = 0.0
 print("Ingresar los sueldos del vendedor correspondientes al primer semestre")
 
 for mes in range(1, 7):
-    sueldoActual = int(input(f"Sueldo del mes {mes}: "))
+    sueldo_actual = int(input(f"Sueldo del mes {mes}: "))
 
-    totalSueldos += sueldoActual
+    total_sueldos += sueldo_actual
 
-    if (mes == 1 or sueldoActual < menorSueldo):
-        menorSueldo = sueldoActual
-        mesMenorSueldo = mes
+    if (mes == 1 or sueldo_actual < menor_sueldo):
+        menor_sueldo = sueldo_actual
+        mes_menor_sueldo = mes
 
-    if (mes == 1 or sueldoActual > mayorSueldo):
-        mayorSueldo = sueldoActual
+    if (mes == 1 or sueldo_actual > mayor_sueldo):
+        mayor_sueldo = sueldo_actual
 
-aguinaldo = mayorSueldo / 2
-promedio = totalSueldos / 6
+aguinaldo = mayor_sueldo / 2
+promedio = total_sueldos / 6
 
 #Resultados finales
 print(f"\nAguinaldo del semestre: ${aguinaldo}")
-print(f"Sueldo mas bajo del semestre: mes {mesMenorSueldo}")
-print(f"Sueldo prmedio del semestre: ${promedio}")
+print(f"Sueldo mas bajo del semestre: mes {mes_menor_sueldo}")
+print(f"Sueldo promedio del semestre: ${promedio}")
 
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingresar los sueldos del vendedor correspondientes al primer semestre
+Sueldo del mes 1: 5000
+Sueldo del mes 2: 4000
+Sueldo del mes 3: 3000
+Sueldo del mes 4: 6000
+Sueldo del mes 5: 5000
+Sueldo del mes 6: 7000
+__________________________________________
+
+Salida
+Aguinaldo del semestre: 
+Sueldo mas bajo del semestre: 
+Sueldo promedio del semestre:
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+sueldo_actual =     0 | 5000 | 4000 | 3000  | 6000  | 5000  | 7000
+total_sueldos =     0 | 5000 | 9000 | 12000 | 18000 | 23000 | 30000
+menor_sueldo =      0 | 5000 | 4000 | 3000
+mayor_sueldo =      0 | 5000 | 6000 | 7000
+mes_menor_sueldo =  0 | 1 | 2 | 3
+aguinaldo =       0.0 | 3500.0
+promedio =        0.0 | 5000.0
+
+'''

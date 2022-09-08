@@ -8,22 +8,39 @@ os.system("cls")
 import random
 
 #Declaro variables
-numeroRandom = int()
+numero_random = int()
 total = int()
 repeticiones = int()
 promedio = float()
 
 #Inicializo variables
-numeroRandom = 0
+numero_random = 0
 total = 0
 repeticiones = 1000
 promedio = 0.0
 
 #Proceso
 for i in range(repeticiones):
-    numeroRandom = random.randint(0, 100000)
-    total += numeroRandom
+    numero_random = random.randint(0, 100000)
+    total += numero_random
 
 promedio = total / repeticiones
 
 print(f"El promedio de los {repeticiones} numeros aleatorios es de {promedio}")
+
+#Prueba de escritorio
+'''
+Sin Entradas                             
+__________________________________________
+Salida
+El promedio de 1000 los numeros aleatorios es de 48172 (ejemplo)
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+repeticiones =  1000 | 
+numero_random =    0 | (aleatorio)
+total =            0 | (depende de la variable nro_random)
+promedio =       0.0 | (depende de la variable total)
+
+'''

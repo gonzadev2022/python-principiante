@@ -5,12 +5,12 @@ os.system("cls")
 # Queremos guardar los nombres y las edades de los alumnos de un curso. Realiza un programa que introduzca el nombre y la edad de cada alumno. El proceso de lectura de datos terminará cuando se introduzca como nombre un asterisco (*) Al finalizar se mostrará los siguientes datos: Todos los alumnos mayores de edad y los alumnos mayores (los que tienen más edad).
 
 #Declaro variables
-alumnosMayores = list()
+alumnos_mayores = list()
 nombre = str()
 edad = int()
 
 #Inicializo variables
-alumnosMayores = []
+alumnos_mayores = []
 nombre = ""
 edad = 0
 
@@ -27,12 +27,51 @@ while True:
 
     if (edad >= 18):
         alumno = [nombre, edad]
-        alumnosMayores.append(alumno)
+        alumnos_mayores.append(alumno)
 
-alumnosMayores.sort(key=lambda alumno: alumno[1])
+#Ordeno lista por edad de forma ascendente
+alumnos_mayores.sort(key=lambda alumno: alumno[1])
 
 print("\nAlumnos mayores de edad ordenados de forma ascendente")
-for alumno in alumnosMayores:
+
+for alumno in alumnos_mayores:
     print(f"{alumno[0]} {alumno[1]} años")
 
 
+#Prueba de escritorio
+'''
+Entrada                                 
+Datos del alumno
+Nombre: maxi
+Edad: 18
+
+Datos del alumno
+Nombre: pepe
+Edad: 17
+
+Datos del alumno
+Nombre: juan
+Edad: 21
+
+Datos del alumno
+Nombre: martin
+Edad: 22
+
+Datos del alumno
+Nombre: maria
+Edad: 19
+
+Datos del alumno
+Nombre: *
+__________________________________________
+
+Salida
+Alumnos mayores de edad ordenados de forma ascendente
+maxi   18 años
+maria  19 años
+juan   21 años
+martin 22 años
+__________________________________________
+
+
+'''

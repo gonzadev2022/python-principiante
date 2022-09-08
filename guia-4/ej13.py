@@ -19,7 +19,7 @@ kms = []
 total_kms = []
 
 #Proceso
-nombre = ["Tincho", "Pepe", "Tio Ben", "Franchesco Virgolini", "Papu Gomez"]
+nombre = ["matias", "ivan", "fernando", "carlitos", "markitos"]
 kms = [
     [5, 5, 5, 5, 5, 5, 5],
     [6, 6, 6, 6, 6, 6, 6],
@@ -28,8 +28,36 @@ kms = [
     [9, 9, 9, 9, 9, 9, 9]
 ]
 
+#Creando lista anidada con conductores y sus respectivos km recorridos
 for i in range(len(nombre)):
     total_kms.append([nombre[i], sum(kms[i])])
 
+#Mostrando lista
 for conductor in total_kms:
     print(f"El conductor {conductor[0]} realizo {conductor[1]} kilometros")
+
+#Prueba de escritorio
+'''
+Sin Entrada                                 
+__________________________________________
+
+Salida
+El conductor matias realizo 35 kilometros
+El conductor ivan realizo 42 kilometros
+El conductor fernando realizo 49 kilometros
+El conductor carlitos realizo 56 kilometros
+El conductor markitos realizo 63 kilometros
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+total_kms =
+[
+ ["matias", 35]
+ ["ivan", 42]
+ ["fernando", 49]
+ ["carlitos", 56]
+ ["markitos", 63]
+]
+
+'''

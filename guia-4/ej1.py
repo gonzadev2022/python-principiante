@@ -7,19 +7,35 @@ os.system("cls")
 
 #Declaro variables
 numeros = list()
-cuadrado = int()
-cubo = int()
 
 #Inicializo variables
 numeros = []
-cuadrado = 0
-cubo = 0
 
 #Proceso
 for i in range(10):
     numeros.append(random.randint(1, 10))
 
 for n in numeros:
-    print(f"Numero: {n}   Al cuadrado: {n*2}   Al cubo: {n*3}")
+    print(f"{n} al cuadrado = {n**2}   {n} al cubo = {n**3}")
 
 
+#Prueba de escritorio
+'''
+Se generan 10 numeros aleatorios entre el 1 y el 10                                 
+__________________________________________
+
+Salida
+
+7  al cuadrado = 49    7 al cubo = 343
+5  al cuadrado = 25    5 al cubo = 125
+9  al cuadrado = 81    9 al cubo = 729
+9  al cuadrado = 81    9 al cubo = 729
+5  al cuadrado = 25    5 al cubo = 125
+1  al cuadrado = 1     1 al cubo = 1
+3  al cuadrado = 9     3 al cubo = 27
+2  al cuadrado = 4     2 al cubo = 8
+7  al cuadrado = 49    7 al cubo = 343
+10 al cuadrado = 100   10 al cubo = 1000
+__________________________________________
+
+'''

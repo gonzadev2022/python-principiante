@@ -28,3 +28,31 @@ for numero in lista1:
 
 print(f"Lista 1: {lista1}")
 print(f"Lista 2: {lista2}")
+
+#Prueba de escritorio
+'''
+Entrada     
+Trabajando con listas
+La carga de numeros finaliza cuando se ingrese un numero negativo    
+
+Ingresa un numero: 1
+Ingresa un numero: 2                     
+Ingresa un numero: 3
+Ingresa un numero: 1
+Ingresa un numero: 2
+Ingresa un numero: 3
+Ingresa un numero: 4
+Ingresa un numero: 5
+Ingresa un numero: 6
+Ingresa un numero: 7
+Ingresa un numero: 7
+Ingresa un numero: 7
+Ingresa un numero: -1
+__________________________________________
+
+Salida
+Lista 1: [1, 2, 3, 1, 2, 3, 4, 5, 6, 7, 7, 7]
+Lista 2: [1, 2, 3, 4, 5, 6, 7]
+__________________________________________
+
+'''

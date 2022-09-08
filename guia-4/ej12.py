@@ -12,17 +12,17 @@ os.system("cls")
 # Visualiza el contenido de la matriz en pantalla.
 
 #Declaro variables
-tabla = list()
 filas = int()
 columnas = int()
 
 #Inicializo variables
-tabla = []
 filas = 5
 columnas = 15
 
 #Proceso
-def crearTablaMarco(filas, columnas):
+def CrearTablaMarco(filas, columnas):
+
+    tabla = []
 
     for f in range(filas):
         tabla.append([])
@@ -35,11 +35,39 @@ def crearTablaMarco(filas, columnas):
     
     return tabla
 
-tabla = crearTablaMarco(filas, columnas)
+#Creando tabla marco 5x15
+marco = CrearTablaMarco(filas, columnas)
 
 #Mostrando tabla
-for fila in tabla:
+for fila in marco:
 
     for elemento in fila:
         print(elemento, end=" ")
     print() #Salto de linea por fila
+
+
+#Prueba de escritorio
+'''
+Sin Entrada                                                        
+__________________________________________
+
+Salida
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+marco =
+[
+ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+ [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+ [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+ [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+]
+
+'''

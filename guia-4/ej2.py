@@ -24,3 +24,23 @@ lista2.reverse()
 
 print(f"\nLista 1: {lista1}")
 print(f"Lista 2: {lista2}")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingresa una cadena: cadena1
+Ingresa una cadena: cadena2
+Ingresa una cadena: cadena3
+Ingresa una cadena: cadena4
+Ingresa una cadena: cadena5
+
+__________________________________________
+
+Salida
+Lista 1: [cadena1, cadena2, cadena3, cadena4, cadena5]
+Lista 2: [cadena5, cadena4, cadena3, cadena2, cadena1]
+__________________________________________
+
+
+'''

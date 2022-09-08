@@ -58,13 +58,16 @@ resultados = [
 #Proceso
 def mostrarJornada(equipos, resultados, j): # j = nro de jornada a mostrar
 
+    j -= 1
     print(f"Resultados de la Fecha {j+1}")
+
     for i in range(4): #4 Partidos por Jornada
         print(f"{equipos[j][i][0]} {resultados[j][i][0]}  {equipos[j][i][1]} {resultados[j][i][1]}")
 
 def mostrarTemporada(equipos, resultados):
 
     print("Resultados de la Temporada actual")
+
     for j in range(len(equipos)):
         print(f"\nResultados de la Fecha {j+1}")
 
@@ -72,8 +75,47 @@ def mostrarTemporada(equipos, resultados):
             print(f"{equipos[j][i][0]} {resultados[j][i][0]}  {equipos[j][i][1]} {resultados[j][i][1]}")
 
 
-# mostrarJornada(equipos, resultados, 2)
-# mostrarTemporada(equipos, resultados)   
+mostrarJornada(equipos, resultados, 1)
+mostrarTemporada(equipos, resultados)   
 
+
+#Prueba de escritorio
+'''
+Sin entradas por teclado
+Para el proceso se utilizan las variables equipos y resultados
+__________________________________________
+
+Salida 1 (mostrando una jornada)
+
+Resultados de la Fecha 1
+Boca Juniors    2    River Plate   1
+Racing Club     2    Independiente 2
+San Lorenzo     1    Huracan       4
+Estudiantes LP  3    Gimnasia LP   2
+__________________________________________
+
+Salida 2 (mostrando la temporada completa)
+
+Resultados de la Temporada actual
+
+Resultados de la Fecha 1
+Boca Juniors    2    River Plate     1
+Racing Club     2    Independiente   2
+San Lorenzo     1    Huracan         4
+Estudiantes LP  3    Gimnasia LP     2
+
+Resultados de la Fecha 2
+San Lorenzo     2     Racing Club    3
+River Plate     1     Independiente  5
+Gimnasia LP     3     Boca Juniors   3
+Huracan         1     Estudiantes LP 1
+
+Resultados de la Fecha 3
+Estudiantes LP  0     River Plate    0
+Independiente   2     San Lorenzo    0
+Racing Club     3     Gimnasia LP    0
+Boca Juniors    1     Huracan        0
+
+'''
 
 

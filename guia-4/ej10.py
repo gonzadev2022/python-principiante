@@ -8,17 +8,17 @@ os.system("cls")
 # c) Suma todos los elementos de cada fila y todos los elementos de cada columna visualizando los resultados en pantalla.
 
 #Declaro variables
-tabla = list()
 filas = int()
 columnas = int()
 
 #Inicializo variables
-tabla = []
 filas = 5
 columnas = 5
 
 #Proceso
-def crearTabla(filas, columnas):
+def CrearTabla(filas, columnas):
+
+    tabla = []
 
     for f in range(filas):
         tabla.append([])
@@ -28,7 +28,8 @@ def crearTabla(filas, columnas):
 
     return tabla
 
-tabla = crearTabla(filas, columnas)
+#Creando tabla 5x5
+tabla = CrearTabla(filas, columnas)
 
 #Mostrando tabla
 for fila in tabla:
@@ -36,3 +37,28 @@ for fila in tabla:
     for elemento in fila:
         print(elemento, end="  ")
     print() #Salto de linea por fila
+
+
+#Prueba de escritorio
+'''
+Sin Entrada                                 
+__________________________________________
+
+Salida (tabla 5x5)
+0  0  0  0  0 
+0  0  0  0  0 
+0  0  0  0  0 
+0  0  0  0  0 
+0  0  0  0  0 
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+tabla =
+[[0, 0, 0, 0, 0]
+ [0, 0, 0, 0, 0]
+ [0, 0, 0, 0, 0]
+ [0, 0, 0, 0, 0]
+ [0, 0, 0, 0, 0]]
+
+'''

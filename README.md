@@ -1,10 +1,11 @@
 # python-principiante
 Guías de ejercicios de Python
 
-Actualmente estoy:
+Actualmente me encuentro trabajando en las Guias 4 y 5:
 1. Elaborando pruebas de escritorio
-2. Cambiando nombres de variables para mejorar la comprension del codigo
-3. Agregando comentarios
-4. Refactorizando algunos ejercicios
+2. Refactorizando algunos ejercicios
 
+Ultima actualizacion: 
+1. Se agregaron las pruebas de escritorio a las Guias 1, 2 y 3
+2. Refactorizacion del codigo de algunos ejercicios
 

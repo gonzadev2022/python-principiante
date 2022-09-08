@@ -15,3 +15,20 @@ numero = int(input("Ingrese un numero entero: "))
 
 print(f"Ultimo digito: {numero % 10}")
 print(f"Ultimos dos digitos: {numero % 100}") 
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingrese un numero entero: 179
+__________________________________________
+
+Salida
+Ultimo digito: 9
+Ultimos dos digitos: 79
+__________________________________________
+
+Proceso (Valores que toman las variables)
+numero = 0 | 179
+
+'''

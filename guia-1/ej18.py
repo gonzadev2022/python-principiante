@@ -7,10 +7,14 @@ os.system("cls")
 #Declaro variables
 turno = int()
 horas = int()
+pago = float()
+jornal = float()
 
 #Inicializo variables
 turno = 0
 horas = 0
+pago = 0.0
+jornal = 0.0
 
 #Proceso
 turno = int(input("Ingresar turno (1 o 2): ")) #1: Diurno #2: Nocturno
@@ -20,4 +24,25 @@ if (turno == 1): pago = 35.50
 elif (turno == 2): pago = 40.60
 else: pago = 0
 
-print(f"\nEl jornal del operario es de ${pago * horas}")
+jornal = pago * horas
+print(f"\nEl jornal del operario es de ${jornal}")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingresar turno (1 o 2): 2
+Horas trabajadas: 8
+__________________________________________
+Salida
+El jornal del operario es de $324.80
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+turno =    0 | 1
+horas =    0 | 8
+pago =   0.0 | 40.60 
+jornal = 0.0 | 324.80
+
+'''

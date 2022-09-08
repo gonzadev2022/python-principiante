@@ -25,10 +25,21 @@ def fibonacci(n):
 
     return fibo
 
-print(fibonacci(1))
-print(fibonacci(2))
-print(fibonacci(3))
-print(fibonacci(4))
-print(fibonacci(5))
-print(fibonacci(6))
+n = int(input("¿Cuantos numeros de la secuencia de fibonacci queres ver?: "))
+print(fibonacci(n))   
 
+
+#Prueba de escritorio
+'''
+Entrada                                 
+¿Cuantos numeros de la secuencia de fibonacci queres ver?: 10
+__________________________________________
+
+Salida
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+__________________________________________
+
+Proceso (Valores que toman las variables)
+n = 0 | 10
+
+'''

@@ -6,15 +6,15 @@ os.system("cls")
 
 #Declaro variables
 pies = int()
-yardas = float()
 pulgadas = int()
+yardas = float()
 centimetros = float()
 metros = float()
 
 #Inicializo variables
 pies = 0
-yardas = 0
 pulgadas = 0
+yardas = 0.0
 centimetros = 0.0
 metros = 0.0
 
@@ -32,3 +32,27 @@ print(f"{pulgadas} pulgadas")
 print(f"{yardas} yardas")
 print(f"{centimetros} centimetros")
 print(f"{metros} metros")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingresar una medida en pies: 5
+__________________________________________
+
+Salida
+5 pie/s es igual a:
+60 pulgadas
+1.66 yardas
+152.4 centimetros
+1.524 metros
+__________________________________________
+
+Proceso (Valores que toman las variables)
+pies =           0 | 5
+pulgadas =       0 | 60
+yardas =       0.0 | 1.66
+centimetros =  0.0 | 152.4
+metros =       0.0 | 1.524
+ 
+'''

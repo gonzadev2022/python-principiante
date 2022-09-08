@@ -26,3 +26,23 @@ if (suma > 10):
     print(f"{suma} / 2 = {(suma/2)}")
 else:
     print(f"{suma} al cubo = {suma**3}")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingresa el primer numero: 10
+Ingresa el segundo numero: 20
+Ingresa el tercer numero: 30
+__________________________________________
+Salida
+60 / 2 = 30
+
+__________________________________________
+
+Proceso (Valores que toman las variables)
+a = 0 | 10
+b = 0 | 20
+c = 0 | 30
+
+'''

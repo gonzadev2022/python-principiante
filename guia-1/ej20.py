@@ -33,3 +33,25 @@ if (adivinados == 0):
     print("El jugador tiene mala suerte, no marco ningun numero de la carton")
 else:
     print(f"El jugador marco {adivinados} numero/s del carton")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Adivina los numeros del carton de Bingo
+Ingresa un numero: 10
+Ingresa un numero: 50
+Ingresa un numero: 80
+__________________________________________
+Salida
+Carton de Bingo: [91, 71, 54, 67, 10, 13, 38, 17, 38, 88, 93, 1, 58, 65, 36]
+El jugador marco 1 numero/s del carton
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+cartonBingo = [] | [91, 71, 54, 67, 10, 13, 38, 17, 38, 88, 93, 1, 58, 65, 36]
+numero =      0  | 10 | 50 | 80
+adivinados =  0  | 1
+
+'''

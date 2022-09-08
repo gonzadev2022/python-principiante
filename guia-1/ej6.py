@@ -21,3 +21,22 @@ area = base * altura / 2
 
 print(f"Altura del triangulo: {altura}")
 print(f"Area del triangulo: {area}")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Base del triangulo = 50
+__________________________________________
+
+Salida
+Altura del triangulo: 2500
+Area del triangulo: 6250
+__________________________________________
+
+Proceso (Valores que toman las variables)
+base =   0 | 50
+altura = 0 | 2500
+area = 0.0 | 6250.0
+
+'''

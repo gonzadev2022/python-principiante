@@ -38,4 +38,24 @@ if (cuadros_recientes > 0): print(f"{cuadros_recientes} cuadro/s tiene/n antigue
 else: print("Renovar stock")
 
 
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingresar el año de creacion de los siguentes cuadros
+Cuadro 1: 1890
+Cuadro 2: 1780
+Cuadro 3: 1900
+__________________________________________
 
+Salida
+Todos los cuadros son anteriores al siglo XX
+Renovar stock
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+año_del_cuadro =    0 | 1890 | 1780 | 1900
+cuadros_antiguos =  0 | 1 | 2 | 3
+cuadros_recientes = 0
+
+'''

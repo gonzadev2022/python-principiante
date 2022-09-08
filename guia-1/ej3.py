@@ -14,3 +14,19 @@ palabra = ""
 palabra = input("Ingrese una palabra: ")
 
 print(f"\n{palabra.upper()}  {palabra.lower()}  {palabra.capitalize()}")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingrese una palabra: teclado                
+__________________________________________
+
+Salida
+TECLADO  teclado  Teclado 
+__________________________________________
+
+Proceso (Valores que toman las variables)
+palabra = "" | "teclado"
+
+'''

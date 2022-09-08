@@ -27,3 +27,24 @@ else:
     mail = nombre[0] + apellido + "@" + dominio
 
 print(f"\nMail sugerido: {mail}")
+
+
+#Prueba de escritorio
+'''
+Entrada         
+Ingrese su nombre: soledad
+Ingrese su apellido: martinez
+Ingrese su dominio: gmail.com                        
+__________________________________________
+Salida
+Mail sugerido: smartinez@gmail.com
+
+__________________________________________
+Proceso (Valores que toman las variables)
+
+nombre =   "" | "soledad"
+apellido = "" | "martinez"
+dominio =  "" | "gmail.com"
+mail =     "" | "smartinez@gmail.com"
+
+'''

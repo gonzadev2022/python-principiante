@@ -15,3 +15,19 @@ nombre = input("Ingrese un nombre de usuario: ")
     
 if (len(nombre) % 2 == 0): print("Par")
 else: print("Impar")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingrese un nombre de usuario: matias                    
+__________________________________________
+
+Salida
+Par
+__________________________________________
+
+Proceso (Valores que toman las variables)
+nombre = "" | "matias"
+
+'''

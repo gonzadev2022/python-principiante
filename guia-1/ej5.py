@@ -17,6 +17,25 @@ binomio = 0
 #Proceso
 a = int(input("Ingrese el valor de A: "))
 b = int(input("Ingrese el valor de B: "))
-binomio = a*2 + 2*a*b + b**2
+binomio = (a+b)**2
 
 print(f"\nCuadrado del binomio: {binomio}")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Ingrese el valor de A: 20
+Ingrese el valor de B: 10
+__________________________________________
+
+Salida
+Cuadrado del binomio: 900
+__________________________________________
+
+Proceso (Valores que toman las variables)
+a = 0 | 20
+b = 0 | 10
+binomio = 0 | 900
+
+'''

@@ -8,74 +8,98 @@ os.system("cls")
 # c) Indicar la cantidad de veces que se generó una secuencia ascendente de 3 o más números impares
 
 #Declaro variables
-numeroActual = int()
-numerosIngresados = int()
-totalMultiplosDeSeis = int()    
-multiplosDeSeis = int()        
+numero_actual = int()
+numero_anterior = int()
+numeros_ingresados = int()
+total_multiplos_de_seis = int()    
+cantidad_multiplos_de_seis = int()        
 promedio = float()           
-numerosDivisorExacto = int()   
-numerosImpares = int()          
-secuenciaImpar = int()  
-primerImpar = bool()
+numeros_divisor_exacto = int()   
+impares = int()          
+secuencia_impar = int()  
 
 #Inicializo variables
-numeroActual = 0
-numerosIngresados = 0
-totalMultiplosDeSeis = 0    #Punto A
-multiplosDeSeis = 0         #Punto A 
-promedio = 0.0              #Punto A
-numerosDivisorExacto = 0    #Punto B
-numerosImpares = 0          #Punto C
-secuenciaImpar = 0          #Punto C
-primerImpar = True          #Punto C
+numero_actual = 0
+numero_anterior = 0
+numeros_ingresados = 0
+total_multiplos_de_seis = 0            #Punto A
+cantidad_multiplos_de_seis = 0         #Punto A 
+promedio = 0.0                         #Punto A
+numeros_divisor_exacto = 0             #Punto B
+impares = 0                            #Punto C
+secuencia_impar = 0                    #Punto C
 
 #Proceso
 print("Secuencia numerica")
 print("La carga finaliza cuando se ingresa el cero\n")
 
 while True:
-    numeroActual = int(input("Ingresa un numero: " ))
-    if (numeroActual == 0): break
+    numero_actual = int(input("Ingresa un numero: " ))
+    if (numero_actual == 0): break
 
-    numerosIngresados += 1
+    numeros_ingresados += 1
     
-    #Punto A
-    if (numeroActual % 6 == 0):
-        totalMultiplosDeSeis += numeroActual
-        multiplosDeSeis += 1
+    #Punto A: Determinando nros multiplos de seis
+    if (numero_actual % 6 == 0):
+        total_multiplos_de_seis += numero_actual
+        cantidad_multiplos_de_seis += 1
     
-    #Punto B
-    if (numerosIngresados == 1):
-        numeroAnterior = numeroActual
-    else:
-        if (numeroAnterior % numeroActual == 0):
-            numerosDivisorExacto += 1
+    #Punto B: Determinando cantidad de nros que son divisor exacto del anterior
+    if (numeros_ingresados > 1) and (numero_anterior % numero_actual == 0):
+        numeros_divisor_exacto += 1
         
-    #Punto C
-    if (numeroActual % 2 != 0):
-        if (numeroActual > numeroAnterior or primerImpar):
-            numerosImpares += 1
-            primerImpar = False
-        
-            if (numerosImpares == 3):
-                secuenciaImpar += 1
-                print(f"Serie ascendente impar completa")
-        else: 
-            numerosImpares = 1 #Igualo la variable a uno en caso que un nro impar rompa la serie ascendente
+    #Punto C: Determinando si se generar sucesiones numericas ascendentes impares
+    if (numero_actual % 2 != 0): 
+        if (impares == 0 or numero_actual > numero_anterior): impares += 1 #Caso 1: se suma impar a la secuencia
+        else: impares = 1 #Caso 2 se iguala la secuencia a 1
 
-    else:
-        numerosImpares = 0 #Reinicio variable cada vez se ingresa un numero par
-        primerImpar = True
-        print(f"Serie ascendente rota")
+    else: impares = 0 #Caso 3: se reinicia la secuencia
 
-    numeroAnterior = numeroActual #Actualizo variable para las comparaciones del punto B y C
+    if (impares == 3):
+        secuencia_impar += 1
 
-if (multiplosDeSeis > 0):
-    promedio = totalMultiplosDeSeis / multiplosDeSeis #Punto A
+    numero_anterior = numero_actual 
+
+if (cantidad_multiplos_de_seis > 0):
+    promedio = total_multiplos_de_seis / cantidad_multiplos_de_seis #Punto A
 
 print("\nResultados")
 print(f"Promedio de numeros multiplos de seis ingresados: {promedio}")
-print(f"Cantidad de números que son divisor exacto del anterior: {numerosDivisorExacto}")
-print(f"Cantidad de veces que se generó una secuencia ascendente de 3 o más números impares: {secuenciaImpar}")
+print(f"Cantidad de números que son divisor exacto del anterior: {numeros_divisor_exacto}")
+print(f"Cantidad de veces que se generó una secuencia ascendente de 3 o más números impares: {secuencia_impar}")
 
 
+#Prueba de escritorio
+'''
+Entrada                                 
+Secuencia numerica
+La carga finaliza cuando se ingresa el cero
+
+Ingresa un numero: 10
+Ingresa un numero: 5
+Ingresa un numero: 12
+Ingresa un numero: 3
+Ingresa un numero: 5
+Ingresa un numero: 7
+Ingresa un numero: 0
+__________________________________________
+
+Salida
+Resultados
+Promedio de numeros multiplos de seis ingresados: 9.0
+Cantidad de números que son divisor exacto del anterior: 2
+Cantidad de veces que se generó una secuencia ascendente de 3 o más números impares: 1
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+numeros_ingresados =         0 | 1  | 2 | 3  | 4 | 5 | 6 |
+numero_actual =              0 | 10 | 5 | 12 | 3 | 5 | 7 | 0
+numero_anterior =            0 | 10 | 5 | 12 | 3 | 5 | 7 |
+total_multiplos_de_seis =    0 | 12        
+cantidad_multiplos_de_seis = 0 | 1     
+promedio =                 0.0 | 12.0                 
+numeros_divisor_exacto =     0 | 1  | 2           
+impares =                    0 | 0  | 1 | 0  | 1 | 2 | 3       
+secuencia_impar =            0 | 1           
+'''

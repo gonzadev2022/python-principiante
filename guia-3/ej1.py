@@ -16,7 +16,7 @@ comision1 = int()
 comision2 = int()
 comision3 = int()
 comision4 = int()
-totalComisiones = int() 
+comisiones_totales = int() 
 
 #Inicializo variables
 categoria = 0
@@ -25,7 +25,7 @@ comision1 = 0
 comision2 = 0
 comision3 = 0
 comision4 = 0
-totalComisiones = 0 
+comisiones_totales = 0 
     
 #Proceso
 print("Comisiones de vendedores")
@@ -43,11 +43,60 @@ while True:
     elif (categoria == 4): comision4 += ventas * 0.40
     else: print("Categoria fuera de rango")
 
-comisionesTotales = comision1 + comision2 + comision3 + comision4
+comisiones_totales = comision1 + comision2 + comision3 + comision4
 
 print("\nInforme general")
-print(f"Comisiones Categoria 1: {int(comision1)}")
-print(f"Comisiones Categoria 2: {int(comision2)}")
-print(f"Comisiones Categoria 3: {int(comision3)}")
-print(f"Comisiones Categoria 4: {int(comision4)}")
-print(f"Comisiones totales a abonar: {int(comisionesTotales)}")
+print(f"Comisiones Categoria 1: ${int(comision1)}")
+print(f"Comisiones Categoria 2: ${int(comision2)}")
+print(f"Comisiones Categoria 3: ${int(comision3)}")
+print(f"Comisiones Categoria 4: ${int(comision4)}")
+print(f"Comisiones totales a abonar: ${int(comisiones_totales)}")
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Comisiones de vendedores
+La carga de datos finaliza cuando se ingrese categoria 0
+
+Datos del vendedor
+Categoria (1 al 4): 1
+Ventas realizadas: 100
+
+Datos del vendedor
+Categoria (1 al 4): 2
+Ventas realizadas: 200
+
+Datos del vendedor
+Categoria (1 al 4): 3
+Ventas realizadas: 300
+
+Datos del vendedor
+Categoria (1 al 4): 4
+Ventas realizadas: 400
+
+Datos del vendedor
+Categoria (1 al 4): 0
+Ventas realizadas: 0
+__________________________________________
+
+Salida
+Informe general
+Comisiones Categoria 1: $10
+Comisiones Categoria 2: $50
+Comisiones Categoria 3: $90
+Comisiones Categoria 4: $160
+Comisiones totales a abonar: $310
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+categoria =           0 |  1  |  2  |  3  |  4  |  0
+ventas =              0 | 100 | 200 | 300 | 400 |  0
+comision1 =           0 | 10 
+comision2 =           0 | 50
+comision3 =           0 | 90
+comision4 =           0 | 160
+comisiones_totales =  0 | 310
+
+'''

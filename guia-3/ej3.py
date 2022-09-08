@@ -8,63 +8,97 @@ os.system("cls")
 # c) Determinar la posición del mayor elemento impar de la secuencia
 
 #Declaro variables
-n = int()
-divisiblesPorTres = int()
-cuadradoDelAnterior = int()
-numerosIngresados = int()
-mayorImpar = int() 
-posicionMayorImpar = int()
-numeroAnterior = int()
-primerImpar = bool()
+numero_actual = int()
+divisibles_por_tres = int()
+pje_divisibles_por_tres = int()
+cuadrado_del_anterior = int()
+numeros_ingresados = int()
+mayor_impar = int() 
+posicion_mayor_impar = int()
+numero_anterior = int()
+primer_impar = bool()
 
 #Inicializo variables
-n = 0
-divisiblesPorTres = 0
-cuadradoDelAnterior = 0
-numerosIngresados = 0
-mayorImpar = 0 
-posicionMayorImpar = 0
-numeroAnterior = 0
-primerImpar = True
+numero_actual = 0
+divisibles_por_tres = 0
+pje_divisibles_por_tres = 0
+cuadrado_del_anterior = 0
+numeros_ingresados = 0
+mayor_impar = 0 
+posicion_mayor_impar = 0
+numero_anterior = 0
+primer_impar = True
 
 #Proceso
 print("Secuencia numerica")
 print("La carga finaliza cuando se ingresa un cero\n")
 
 while True:
-    numeroActual = int(input("Ingresa un numero: "))
-    if (numeroActual == 0): break
+    numero_actual = int(input("Ingresa un numero: "))
+    if (numero_actual == 0): break
 
-    numerosIngresados += 1
+    numeros_ingresados += 1
 
     #Determinando nros divisibles por 3
-    if (numeroActual % 3 == 0): 
-        divisiblesPorTres += 1
+    if (numero_actual % 3 == 0): 
+        divisibles_por_tres += 1
     
     #Determinando mayor impar
-    if (numeroActual % 2 != 0): 
-
-        if (numeroActual > mayorImpar or primerImpar):
-            mayorImpar = numeroActual
-            posicionMayorImpar = numerosIngresados
-            
-        primerImpar = False
+    if (numero_actual % 2 != 0) and (primer_impar or numero_actual > mayor_impar):
+        mayor_impar = numero_actual
+        posicion_mayor_impar = numeros_ingresados
+        primer_impar = False
 
     #Determinando nros que son cuadrados del anterior
-    if (numerosIngresados == 1):
-        numeroAnterior = numeroActual
-    else:
-        if (numeroActual == numeroAnterior ** 2): 
-            cuadradoDelAnterior += 1
+    if (numeros_ingresados > 1) and (numero_actual == numero_anterior ** 2):
+        cuadrado_del_anterior += 1
 
-        numeroAnterior = numeroActual #Guardo el nro actual para la siguente comparacion
+    numero_anterior = numero_actual #Guardo el nro actual para la siguente comparacion
 
-if (numerosIngresados > 0):
-    pjeDivisiblesPorTres = int(divisiblesPorTres * 100 / numerosIngresados)
+if (numeros_ingresados > 0):
+    pje_divisibles_por_tres = int(divisibles_por_tres * 100 / numeros_ingresados)
 
 print("\nResultados generales")
-print(f"Porcentaje de numeros que son divisibles por 3 en la secuencia: {pjeDivisiblesPorTres}%")
-print(f"Cantidad de numeros que son cuadrados del numero anterior {cuadradoDelAnterior}")
-print(f"Posicion del mayor elemento impar en la secuencia: {posicionMayorImpar}")
+print(f"Porcentaje de numeros que son divisibles por 3 en la secuencia: {pje_divisibles_por_tres}%")
+print(f"Cantidad de numeros que son cuadrados del numero anterior: {cuadrado_del_anterior}")
+print(f"Posicion del mayor elemento impar en la secuencia: {posicion_mayor_impar}")
+
+
+#Prueba de escritorio
+'''
+Entrada   
+Secuencia numerica
+La carga finaliza cuando se ingresa un cero
+
+Ingresa un numero: 5           
+Ingresa un numero: 25  
+Ingresa un numero: 30              
+Ingresa un numero: 2 
+Ingresa un numero: 7 
+Ingresa un numero: 0  
+
+__________________________________________
+
+Salida
+Resultados generales
+Porcentaje de numeros que son divisibles por 3 en la secuencia: 20%
+Cantidad de numeros que son cuadrados del numero anterior: 1
+Posicion del mayor elemento impar en la secuencia: 2
+__________________________________________
+
+Proceso (Valores que toman las variables)
+
+numero_actual =            0 |  5  |  25  |  30 |  2  |  7  |  0
+divisibles_por_tres =      0 |  1
+pje_divisibles_por_tres =  0 |  20
+cuadrado_del_anterior =    0 |  1
+numeros_ingresados =       0 |  1  |  2  |  3  |  4  |  5
+mayor_impar =              0 |  5  |  25
+posicion_mayor_impar =     0 |  1  |  2
+numero_anterior =          0 |  5  |  25  |  30  |  2  |  7  
+primer_impar =          True | False | False
+
+'''
+
 
 

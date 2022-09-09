@@ -8,33 +8,21 @@ os.system("cls")
 # c) Determinar la longitud de la palabra más larga del texto
 # d) Determinar cuántas palabras contuvieron la expresión "de", pero en la primera mitad de la palabra
 
-#Declaro variables
-texto = str()
-textoSinPunto = str()
-palabra = str()
-palabras_ingresadas = int()
-palabras_con_digitos = int()
-palabras_cortas = int()
-palabras_medianas = int()
-palabras_largas = int()
-palabra_mas_larga = int()
-palabras_con_de = int()
-
-#Inicializo variables
-texto = ""
-textoSinPunto = ""
-palabra = ""
-palabras_ingresadas = 0
-palabras_con_digitos = 0
-palabras_cortas = 0
-palabras_medianas = 0
-palabras_largas = 0
-palabra_mas_larga = 0
-palabras_con_de = 0
-
 #Proceso
 
 def analisis_de_texto():
+
+    texto = ""
+    textoSinPunto = ""
+    palabra = ""
+    palabras_ingresadas = 0
+    palabras_con_digitos = 0
+    palabras_cortas = 0
+    palabras_medianas = 0
+    palabras_largas = 0
+    palabra_mas_larga = 0
+    palabras_con_de = 0
+
     print("Analisis de texto")
     print("La carga de texto finalizara cuando se ingrese un punto\n")
 
@@ -48,20 +36,20 @@ def analisis_de_texto():
 
         for palabra in textoSinPunto.split():
 
-            #Punto A
+            #Punto A: Cantidad de palabras con digitos
             if not palabra.isalpha(): palabras_con_digitos += 1
 
-            #Punto B
+            #Punto B: Clasificacion de palabras por longitud
             if len(palabra) <= 3: palabras_cortas += 1
             if len(palabra) >= 4 and len(palabra) <= 6: palabras_medianas += 1
             if len(palabra) > 6: palabras_largas += 1
 
-            #Punto C
-            if (palabras_ingresadas == 1 or len(palabra) > palabra_mas_larga):
+            #Punto C: Determinando palabra mas larga (longitud)
+            if (palabras_ingresadas == 1) or (len(palabra) > palabra_mas_larga):
                 palabra_mas_larga = len(palabra)
 
-            #Punto D
-            if (palabra.find("de") < int(len(palabra) / 2) and palabra.find("de") != -1):
+            #Punto D: Cantidad de palabras con "de"
+            if (palabra.find("de") < int(len(palabra) / 2)) and (palabra.find("de") != -1):
                 palabras_con_de += 1
 
     print("\nResultados")
@@ -72,4 +60,27 @@ def analisis_de_texto():
     print(f"Longitud de la palabra mas larga del texto: {palabra_mas_larga} letras")
     print(f"Cantidad de palabras que contienen la expresion de en la primera mitad de la palabra: {palabras_con_de}")
 
-# analisis_de_texto()
+analisis_de_texto()
+
+
+#Prueba de escritorio
+'''
+Entrada                                 
+Analisis de texto
+La carga de texto finalizara cuando se ingrese un punto
+
+Ingresar texto: despues de programar me v0y a c0mer un sanguche de milanesa.
+____________________________________________________________________________________
+
+Salida
+Resultados
+Cantidad de palabras que contenian al menos un digito: 2
+Cantidad de palabras que tienen 3 letras o menos: 6
+Cantidad de palabras que tienen entre 4 y 6 letras: 1
+Cantidad de palabras que tienen mas de 6 letras: 4
+Longitud de la palabra mas larga del texto: 9 letras
+Cantidad de palabras que contienen la expresion de en la primera mitad de la palabra: 3
+____________________________________________________________________________________
+
+
+'''

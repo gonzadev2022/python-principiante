@@ -11,3 +11,13 @@ def cartelContinuar():
     input("PRESIONE ENTER\nPARA CONTINUAR\n")
 
 cartelContinuar()
+
+
+#Prueba de escritorio
+'''
+Salida
+
+PRESIONE ENTER
+PARA CONTINUAR
+
+'''

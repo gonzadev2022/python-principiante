@@ -6,7 +6,7 @@ os.system("cls")
 
 #Proceso
 def simplificar(P, Q):
-    primos = [2, 3, 5, 7, 11]
+    primos = (2, 3, 5, 7, 11)
 
     for n in primos:
     
@@ -29,3 +29,21 @@ print(f"{fraccion1[0]}/{fraccion1[1]}")
 print(f"{fraccion2[0]}/{fraccion2[1]}")
 print(f"{fraccion3[0]}/{fraccion3[1]}")
 print(f"{fraccion4[0]}/{fraccion4[1]}")
+
+#Prueba de escritorio
+'''
+Entrada (4 casos de prueba)                        
+105 / 210
+15 / 45
+22 / 44
+9 / 4
+__________________________________________
+
+Salida
+1 / 2
+1 / 3
+1 / 2
+3 / 8
+__________________________________________
+
+'''

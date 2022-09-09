@@ -14,7 +14,7 @@ def generar_secuencia():
     lista = []
     n = 0
 
-    print("La carga de numeros finalizara cuando se ingrese el numero cero")
+    print("La carga de numeros finalizara cuando se ingrese el un cero")
 
     while True:
         n = int(input("Ingrese un numero: "))
@@ -30,35 +30,34 @@ def operaciones_secuencia_numerica(lista):
     pares = 0
     ultimo_digito = 0
     menor_impar = 0
-    primer_impar = True
     porcentaje_de_pares = 0
     secuencia_menores_que7 = True
 
     for n in lista:
 
-        #Punto A
+        numeros_ingresados += 1
+
+        #Punto A: Cantidad de nros pares
         if (n % 2 == 0): 
             pares += 1
 
-        #Punto B
-        if (n % 10 == 5 or n % 10 == 4): 
+        #Punto B: Cantidad de nros terminados de 4 o 5
+        if (n % 10 == 5) or (n % 10 == 4): 
             ultimo_digito += 1
 
-        #Punto C
-        if (n % 3 == 0):
-            if (primer_impar or n < menor_impar):
-                menor_impar = n
+        #Punto C: Determinando menor impar multiplo de 3
+        if (n % 3 == 0) and (n % 2 != 0) and (numeros_ingresados == 1 or n < menor_impar):
+            menor_impar = n
 
-            primer_impar = False
-
-        #Punto D
+        #Punto D: Determinando si solo se ingresan solo nros menores que 7
         if (n >= 7):
             secuencia_menores_que7 = False
 
-        numeros_ingresados += 1
-    
-    porcentaje_de_pares = int(pares * 100 / numeros_ingresados)
         
+    
+    porcentaje_de_pares = int(pares * 100 / numeros_ingresados) #Punto A
+    
+    #Resultados
     print(f"\nPorcentaje de numeros pares de la lista: {porcentaje_de_pares}%")
     print(f"Cantidad de numeros con ultimo digito cuatro o cinco: {ultimo_digito}")
     print(f"Menor numero impar divisible por tres: {menor_impar}")
@@ -69,3 +68,27 @@ def operaciones_secuencia_numerica(lista):
 lista = generar_secuencia()
 operaciones_secuencia_numerica(lista)
 
+
+#Prueba de escritorio
+'''
+Entrada                                 
+La carga de numeros finalizara cuando se ingrese el un cero
+
+Ingrese un numero: 6
+Ingrese un numero: 12
+Ingrese un numero: 18
+Ingrese un numero: 24
+Ingrese un numero: 30
+Ingrese un numero: 3
+Ingrese un numero: 1
+Ingrese un numero: 0
+____________________________________________________________________________________
+
+Salida
+Porcentaje de numeros pares de la lista: 71%
+Cantidad de numeros con ultimo digito cuatro o cinco: 1
+Menor numero impar divisible por tres: 3
+La secuencia numerica no esta formada por numeros menores que 7
+____________________________________________________________________________________
+
+'''

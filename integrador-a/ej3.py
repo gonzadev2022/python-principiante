@@ -42,7 +42,6 @@ Ingresa un numero: 40
 Ingresa un numero: 50
 Ingresa un numero: -1
 __________________________________________
-
 Salida
 
 La suma de los numeros ingresados es 150

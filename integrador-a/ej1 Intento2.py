@@ -69,18 +69,19 @@ def DiasTranscurridosDelAño(dia, mes, año):
     return dias_transcurridos
 
 #Punto G
-def TiempoTranscurridoEntreFechas(dia1, mes1, año1, dia2, mes2, año2):
+def DiferenciaEntreFechas(dia1, mes1, año1, dia2, mes2, año2):
     
     if not(FechaValida(dia1, mes1, año1)): return "Fecha 1 no valida"
     if not(FechaValida(dia2, mes2, año2)): return "Fecha 2 no valida"
 
-    #Solucion 1: solo diferencia de dias
-    if (mes1 == mes2 and año1 == año2): return dia2 - dia1
-
     dias_transcurridos = 0  
 
+    #Solucion 1: solo diferencia de dias
+    if (mes1 == mes2 and año1 == año2): 
+        dias_transcurridos = dia2 - dia1
+
     #Solucion 2: diferencia de fechas en el mismo año
-    if (año1 == año2):
+    elif (año1 == año2):
 
         dias_transcurridos += DiasRestantesDelMes(dia1, mes1, año1)
 
@@ -88,22 +89,43 @@ def TiempoTranscurridoEntreFechas(dia1, mes1, año1, dia2, mes2, año2):
             dias_transcurridos += DiasDelMes(mes_actual, año1)
 
         dias_transcurridos += dia2
-        return dias_transcurridos
 
     #Solucion 3: diferencia de fechas en diferentes años
-    for año_actual in range(año1, año2+1):
+    else:
+        for año_actual in range(año1, año2+1):
 
-        if (año_actual == año1):
-            dias_transcurridos += DiasRestantesDelAño(dia1, mes1, año1)
+            if (año_actual == año1):
+                dias_transcurridos += DiasRestantesDelAño(dia1, mes1, año1)
 
-        elif (año_actual == año2):
-            dias_transcurridos += DiasTranscurridosDelAño(dia2, mes2, año2)
+            elif (año_actual == año2):
+                dias_transcurridos += DiasTranscurridosDelAño(dia2, mes2, año2)
 
-        else:
-            if (AñoBisiesto(año_actual)): dias_transcurridos += 366
-            else: dias_transcurridos += 365
-        
+            else:
+                if (AñoBisiesto(año_actual)): dias_transcurridos += 366
+                else: dias_transcurridos += 365
+
     return dias_transcurridos
     
-resultado = TiempoTranscurridoEntreFechas(30, 4, 2012, 1, 8, 2013)
-print(resultado)
+#Casos de prueba
+print(DiferenciaEntreFechas(1, 4, 2012, 30, 4, 2012))
+print(DiferenciaEntreFechas(1, 4, 2012, 1, 10, 2012))
+print(DiferenciaEntreFechas(1, 4, 2012, 6, 4, 2013))
+
+
+#Prueba de escritorio
+'''
+Entrada     
+
+Desde           Hasta
+1, 4, 2012,    30, 4 , 2012
+1, 4, 2012,    1 , 10, 2012
+1, 4, 2012,    6 , 4 , 2013
+__________________________________________
+
+Salida (expresado en dias)
+29
+183
+370
+__________________________________________
+
+'''

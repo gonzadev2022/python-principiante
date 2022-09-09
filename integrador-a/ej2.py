@@ -15,4 +15,32 @@ def definirDia(n):
     if(n % 7 == 6): return "Sabado"
     return "Domingo"
 
+print(definirDia(1))
+print(definirDia(7))
 print(definirDia(10))
+print(definirDia(12))
+print(definirDia(13))
+
+
+#Prueba de escritorio
+'''
+Entrada 
+      
+1
+7
+10        
+12
+13                  
+__________________________________________
+
+Salida
+
+Lunes
+Domingo
+Miercoles
+Viernes
+Sabado
+__________________________________________
+
+'''
+

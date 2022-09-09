@@ -39,4 +39,26 @@ print("Nota esperada:   "," | ".join(nota_esperada))
 VerificarAfinacionDePiano(nota_piano, nota_esperada)
 
 
+#Prueba de escritorio
+'''
+Entrada                                 
+
+nota_piano = ["N", "N", "B", "B", "N", "N", "N", "B", "N", "B", "B", "N"]
+nota_esperada = ["N", "B", "N", "B", "B", "N", "B", "N", "B", "B", "N", "N"]
+__________________________________________
+
+Salida
+
+Antes de llamar al procedimiento
+Nota Piano:     N | N | B | B | N | N | N | B | N | B | B | N
+Nota Esperada:  N | B | N | B | B | N | B | N | B | B | N | N
+
+Luego de llamar al procedimiento
+Nota Piano:        N |  N  |  B  |  B  |  N  |  N  |  N  |  B  |  N  |  B  |  B  |  N
+Nota Esperada:     N |  B  |  N  |  B  |  B  |  N  |  B  |  N  |  B  |  B  |  N  |  N
+¿Debe afinarse?:  No |  Si |  Si |  No |  Si |  No |  Si |  Si |  Si |  No |  Si |  No
+__________________________________________
+
+
+'''
 

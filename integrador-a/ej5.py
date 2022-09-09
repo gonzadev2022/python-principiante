@@ -4,7 +4,6 @@ import os
 # Se pide que implemente el procedimiento ReparandoLaNave(). Teniendo en cuenta que el marciano de la imagen debe llegar a su hogar con suficiente combustible, se pide que recorra el camino indicado, teniendo en cuenta que en el medio se puede encontrar con combustible, el cual, es representado con celdas Rojas y Negras. El combustible podria estar en cualquier parte del camino. Si el combustible es Rojo, nuestro amigo el marciano se detendra y dejara una mancha verde en el lugar, debido a que encontro combustible de calidad, pero luego seguira su camino. Si el combustible es Negro, podra avanzar sin problemas. El camino tiene 5 celdas de ancho
 
 #Proceso
-opcion = ""
 marca = False
 mapa = [
     ["H", ".", ".", ".", "."],
@@ -17,6 +16,7 @@ mapa = [
     ["R", ".", "R", ".", "N"],
     ["M", ".", ".", ".", "."]
 ]
+
 def limpiarPantalla():
     os.system("cls")
 
@@ -121,25 +121,31 @@ def derecha(mapa, marca):
     
     return [mapa, marca]
 
-# while (opcion != "0"):
+def ReparandoLaNave(mapa, marca):
 
-#     limpiarPantalla()
-#     print("Lleva al marcianito a su hogar")
-#     print("Controles A W S D")
-#     print("Pulse 0 para salir \n")
-#     MostrarMapa(mapa)
-#     opcion = input("\nMovimiento: ").upper()
+    opcion = ""
 
-#     if (opcion == "A"): info = izquierda(mapa, marca)
-#     elif (opcion == "W"): info = arriba(mapa, marca)
-#     elif (opcion == "S"): info = abajo(mapa, marca)
-#     elif (opcion == "D"): info = derecha(mapa, marca)
-#     elif (opcion == "0"): break
+    while (opcion != "0"):
 
-#     mapa = info[0]
-#     marca = info[1]
+        limpiarPantalla()
+        print("Lleva al marcianito a su hogar")
+        print("Controles A W S D")
+        print("Pulse 0 para salir \n")
+        MostrarMapa(mapa)
+        opcion = input("\nMovimiento: ").upper()
 
-#     if (mapa[0][0] == "M"):
-#         print("\nEl marcianito cumbiero llego a su hogar")
-#         print("'Suena Nunca me faltes de Antonio Rios de fondo'")
-#         break
+        if (opcion == "A"): info = izquierda(mapa, marca)
+        elif (opcion == "W"): info = arriba(mapa, marca)
+        elif (opcion == "S"): info = abajo(mapa, marca)
+        elif (opcion == "D"): info = derecha(mapa, marca)
+        elif (opcion == "0"): break
+
+        mapa = info[0]
+        marca = info[1]
+
+        if (mapa[0][0] == "M"):
+            print("\nEl marcianito cumbiero llego a su hogar")
+            print("'Suena Nunca me faltes de Antonio Rios de fondo'")
+            break
+
+ReparandoLaNave(mapa, marca)

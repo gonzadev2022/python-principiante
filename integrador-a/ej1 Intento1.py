@@ -166,5 +166,9 @@ def diferenciaEntreFechas(dia1, mes1, año1, dia2, mes2, año2):
         
     return [diferenciaEnAños, diferenciaEnMeses, diferenciaEnDias]
 
-resultado = diferenciaEntreFechas(30, 4, 2012, 1, 8, 2013)
-print(resultado)
+#Casos de prueba
+print(diferenciaEntreFechas(1, 4, 2012, 30, 4, 2012))
+print(diferenciaEntreFechas(1, 4, 2012, 1, 10, 2012))
+print(diferenciaEntreFechas(1, 4, 2012, 6, 4, 2013))
+
+

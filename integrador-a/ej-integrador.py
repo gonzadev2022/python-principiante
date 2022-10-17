@@ -1,14 +1,15 @@
 # Enunciado 
-# Una empresa que vente latas te pide que realices un programa el cual pueda registar las compras de un determinado numero de clientes
+# Una empresa que vende latas te pide que realices un programa el cual pueda registar las compras de un determinado numero de clientes
 
 # Por cada cliente se debe ingresar:
 # Numero de cliente
 # Tipo de lata (A o B)
 # Unidades compradas
 
-# Aclaracion:
+# Aclaraciones:
 # El tipo de lata "A" tiene un valor de $120
 # El tipo de lata "B" tiene un valor de $150
+# La cantidad de clientes a registrar se ingresa al principio del programa
 
 #En base a esto, determinar:
 # 1. ¿Cual fue el cliente que mas compro en pesos?
